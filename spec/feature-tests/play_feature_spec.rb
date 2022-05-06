@@ -2,10 +2,10 @@ feature "Playing the game" do
 
   scenario "page contains 'Testing infrastructure working!'" do
     visit("/")
-    fill_in 'player_1', with: 'Tom'
-    fill_in 'player_2', with: 'Sam'
+    fill_in :player_1, with: 'Tom'
+    fill_in :player_2, with: 'Sam'
     click_on 'Submit'
-    expect(page).to have_text 'Tom vs Sam'
+    expect(page).to have_content 'Tom vs Sam'
   end
 
 end
